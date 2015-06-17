@@ -1,0 +1,146 @@
+
+
+.position{
+
+	margin-left: 30%;
+}
+
+.position_data_dismis_signs{
+	margin-left: 90%;
+  cursor: pointer;
+  color: blue;
+    	
+}
+
+
+
+/*this is the styling for the form editing and update*/
+
+#container {
+/*width:722px;*/
+width:822px;
+height:610px;
+margin:-20px auto
+}
+#wrapper {
+/*width:520px;*/
+width:800px;
+padding:0 50px 20px;
+/*background:linear-gradient(#fff,#AFEBD8);*/
+background:#fff;
+border:1px solid #ccc;
+box-shadow:0 0 5px;
+font-family:'Marcellus',serif;
+float:left;
+margin-top:10px
+}
+#menu {
+float:left;
+width:270px;
+margin-top:-30px
+}
+#detail {
+float:right;
+width:360px;
+margin-top:-27px
+}
+a {
+text-decoration:none;
+color:blue
+}
+a:hover {
+color:red
+}
+li {
+padding:4px 0
+}
+h1 {
+text-align:center;
+font-size:28px
+}
+hr {
+border:0;
+border-bottom:1.5px solid #ccc;
+margin-top:-12px;
+margin-bottom:25px
+}
+#hide {
+display:none
+}
+form {
+margin-top:10px
+}
+label {
+font-size:17px
+}
+input {
+width:100%;
+padding:8px;
+margin:5px 0 15px;
+border:none;
+box-shadow:0 0 5px
+}
+input#submit {
+margin-top:10px;
+font-size:18px;
+background:linear-gradient(#22abe9 5%,#36caf0 100%);
+border:1px solid #0F799E;
+color:#fff;
+font-weight:700;
+cursor:pointer;
+text-shadow:0 1px 0 #13506D
+}
+input#submit:hover {
+background:linear-gradient(#36caf0 5%,#22abe9 100%)
+}
+p {
+font-size:18px;
+font-weight:700;
+color: #276696;
+/*color:#18af0b*/
+}
+/*end of form edit*/
+/*custom delete button*/
+.delete-button{
+width:100%;
+padding:8px;
+margin-top:10px;
+font-size:18px;
+background:linear-gradient(#22abe9 5%,#36caf0 100%);
+border:1px solid #0F799E;
+color:#fff;
+font-weight:700;
+cursor:pointer;
+text-shadow:0 1px 0 #13506D
+}
+.delete-button:hover {
+/*background:linear-gradient(#36caf0 5%,#22abe9 100%)*/
+background:linear-gradient(red 5%,red 100%);
+}
+/*custom delete button*/
+
+/*automatic dropdown in navbar*/
+@media (min-width: 768px) {
+	.dropdown:hover .dropdown-menu {
+		display: block;
+	}
+}
+
+
+.clsDatePicker {
+    z-index: 100000;
+}
+
+
+
+/*.navbar {
+    color: #FFFFF0;
+    background-color: #276696
+}
+
+
+.navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus {
+    background-color: #276696;
+    color: #F2F3F4;
+}
+*/

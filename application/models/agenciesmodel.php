@@ -320,14 +320,37 @@ class agenciesmodel extends CI_Model
 
   }
 
+  	/*****************************************************************************************************
+	*                                 Central Level MOS SOH Functions                                              *
+	*                                                                                                    *
+	*****************************************************************************************************/
+
+
   public function getCentralAAC($period)
   {
 
-  	$sql="SELECT staticparameterid,period,commodity_id as cid,(SELECT commodity_name FROM commodities WHERE commodity_id=cid) as cname ,average_monthly_consumption,reporting_rate FROM static_parameters WHERE date(period) ='{$period}'";
+  	$sql="SELECT staticparameterid,period,commodity_id as cid,(SELECT commodity_name FROM commodities WHERE commodity_id=cid) as cname ,average_monthly_consumption,reporting_rate FROM static_parameters WHERE period ='{$period}'";
   	$result=$this->db->query($sql);
   	return $result->result();
 
   }
+  /*SELECT central_drugs_id,drug_id ,(SELECT mapping_name FROM mapping_drugs_category2 WHERE mapping_id=drug_id ) as commodity_name,period,drug_category_id,drug_value,(SELECT reporting_rate_value FROM central_reporting_rates where period =201406) as reporting_rate FROM `central_level_drugs` where period=201406 and drug_category_id= 'w77uMi1KzOH'*/
+
+public function getCentralDhisAAC($period)
+  {
+
+  	$sql="SELECT central_drugs_id,drug_id ,(SELECT mapping_name FROM mapping_drugs_category2 WHERE mapping_id=drug_id ) as commodity_name,period,drug_category_id,drug_value,(SELECT reporting_rate_value FROM central_reporting_rates where period ='{$period}') as reporting_rate ,((drug_value/(SELECT reporting_rate_value FROM central_reporting_rates where period ='{$period}'))*100) as AAC FROM `central_level_drugs` where period='{$period}' and (drug_category_id= 'w77uMi1KzOH' or drug_category_id='rPAsF4cpNxm') order by drug_id asc";
+  	$result=$this->db->query($sql);
+  	return $result->result();
+
+  }
+
+
+  	function show_static_param_periods(){
+	$query = $this->db->get('static_parameters');
+	$query_result = $query->result();
+	return $query_result;
+	}
 }
 ?>
 

@@ -360,13 +360,31 @@ public function pendingstocksReports() {
 	$this->load->view('pendingshipments',$data2);
 }
 
-public function centralLevelstocksReports($period){
 
+	/*****************************************************************************************************
+    *                        Central level Reports(SOH,MOS)                                                       *
+    *                                                                                                    *
+    *****************************************************************************************************/
+
+public function centralLevelStocksReports($period){
     $centralReport['period']=$this->agenciesmodel->getCentralAAC($period);
     $this->load->view('centralreport',$centralReport);
-    //echo ("hfhghfhdg");
 
-	//print_r($centralreport)
+	//print_r($period);
+}
+
+public function centralLevelDhisStocksReports($period){
+    $centralReport['period']=$this->agenciesmodel->getCentralDhisAAC($period);
+    $this->load->view('centralDhisReport',$centralReport);
+    
+}
+
+public function select_period(){   
+
+      $centralReport['period'] =  "";
+      $centralReport['period_dates'] = $this->agenciesmodel->show_static_param_periods();
+      $this->load->view('centralreport',$centralReport);
+			
 }
 	
 

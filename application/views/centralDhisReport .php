@@ -10,7 +10,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 if(isset($period)){
  
-print_r($period);
+//sprint_r($period);
 }
 
 
@@ -31,7 +31,10 @@ print_r($period);
 <table border="1" style="width:100%">
   <tr>
   <td>
-  Central Level
+  Commodity name
+ </td>
+  <td>
+  Facility level data
  </td>
   <td>
   Aggregated Adjusted Consumption Totals (3 month average)
@@ -45,17 +48,30 @@ print_r($period);
   </tr>
 
 
-  <tr>
-    <td>AL6s</td>
-    <td>AAC</td>
-  </tr>
+  
 
-<?php if(isset($period)){
+<?php 
+if(!empty($period))
+{
  
+//print_r($p);
+  foreach($period as $p)
+  {
+    //print_r($p);
+    echo("<tr>");
+    echo $p->commodity_name;
+    echo("<td></td>");
 
-//  foreach($period as $p):
 
-// endforeach;
+
+
+
+
+    echo("</tr>");
+
+
+
+  }
 }
 ?>
 

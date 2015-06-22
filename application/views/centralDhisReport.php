@@ -45,10 +45,7 @@ print_r($period);
   </tr>
 
 
-  <tr>
-    <td>AL6s</td>
-    <td>AAC</td>
-  </tr>
+  
 
 <?php if(isset($period)){
  

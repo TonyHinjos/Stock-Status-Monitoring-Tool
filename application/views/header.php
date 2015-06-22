@@ -86,7 +86,7 @@
             <li class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown">Reports<b class="caret"></b> </a>
               <ul class= "dropdown-menu"> 
-                <li><a href="<?= base_url();?>index.php/update_ctrl/centralLevelstocksReports">Central Level Drug Status</a></li>   
+                <li><a href="<?= base_url();?>index.php/update_ctrl/select_period">Central Level Drug Status</a></li>   
                 <li><a href="<?= base_url();?>index.php/update_ctrl/countyLevelstocksReports">County Level Drug Status</a></li>         
                 <li><a href="#" >Central</a></li>
                 <li><a href="<?= base_url();?>index.php/update_ctrl/DisplayPendingShipments">Total Pending Commodities</a></li>
